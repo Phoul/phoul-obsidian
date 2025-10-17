@@ -1,2 +1,2 @@
 # phoul-obsidian
-My Obsidian Vault
+My Obsidian Vault Template
