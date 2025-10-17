@@ -1,0 +1,22 @@
+views:
+  - type: table
+    name: Created
+    filters:
+      and:
+        - file.ctime == this.note.date
+    order:
+      - file.name
+    sort:
+      - property: file.ctime
+        direction: DESC
+  - type: table
+    name: Modified
+    filters:
+      and:
+        - file.mtime == this.note.date
+        - file.ctime != this.note.date
+    order:
+      - file.name
+    sort:
+      - property: file.mtime
+        direction: DESC
